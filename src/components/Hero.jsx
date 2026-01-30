@@ -1,11 +1,37 @@
 import React from 'react'
 import House from './hero-models/House'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import AnimatedCounter from './AnimatedCounter'
 function Hero() {
     const word =[ 'web' , 'web3' , 'python','aiml','backend','frontend','appdev' ]
+    useGSAP(()=>{
+        gsap.fromTo('.heroo h1 ',{
+            y:50,
+            opacity:0
+        },{
+            opacity:1,
+            y:0,
+            stagger:0.2,
+            duration:1
+        })
+        
+        gsap.fromTo('.heroo button',{
+            y:30,
+            opacity:0,
+            scale:0.9
+        },{
+            opacity:1,
+            y:0,
+            scale:1,
+            duration:1,
+            delay:0.5
+        })
+    })
   return (
     <div>
-        <section className='relative overflow-hidden m-5  flex flex-row justify-between '>
-            <div className='h-80vh mt-20'>
+        <section className='heroo relative overflow-hidden m-5  flex flex-row justify-between '>
+            <div className='h-80vh mt-40'>
                 <header className='flex flex-col justify-center '>
                     <div className='flex flex-col mb-3 '
                     style={{
@@ -31,19 +57,19 @@ function Hero() {
                     <div className='mb-5'>
                         <p>hello i am pritam, it's great to see u in my page</p>
                     </div>
-                    <div>
+                    <div className='heroo'>
                          <button
-                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-full border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 "
+                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-xl border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 "
                         style={{
                             backgroundColor: "#727070ff",
-                            borderRadius: "40px",
-                            fontFamily: "cursive",
+                            borderRadius: "20px",
+                            // fontFamily: "cursive",
                             color: "white",
                             fontWeight: "bold",
                             cursor: "pointer",
                             transition: "all 0.3s ease",
                             padding: "10px 20px",
-                            border: "none",
+                            border: "1px ",
                             overflow: "hidden",
                             position: "relative"
                         }}
@@ -81,16 +107,17 @@ function Hero() {
                 </header>
             </div>
 
-            <figure className=' h-full w-full items-center justify-center mt-20' 
+            <figure className=' h-full w-full items-center justify-center pointer-events-auto ' 
             style={{
                 // border: "2px solid red"
             }}>
-                <div className='border-red-200  '>
+                <div className='border-red-200 '>
                     <House/>
                     
                 </div>
             </figure>
         </section>
+            <AnimatedCounter/>
     </div>
   )
 }
