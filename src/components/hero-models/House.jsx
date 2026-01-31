@@ -9,8 +9,9 @@ function House() {
     const isMobile = useMediaQuery({query: '(max-width:768px)'});
     return (
     <Canvas
-     camera={{position :[0,10,100],fov : 45}}
-     style={{ width: '100%', height: '900px' }}
+     camera={{position :[40,40,40],fov : 45}}
+     style={{ width: '100%', height: '800px', border:" 2px solid black" ,justifyContent: "center",alignContent:"center", overflow: 'visible'}}
+     className='p-5 overflow-visible'
     >
         {/* <ambientLight intensity={0.5} color="#ffffff"/> */}
         {/* <directionalLight intensity={1} position={[10,10,2]} color="#ffffff"/> */}
@@ -60,7 +61,7 @@ function House() {
             position={isMobile ? [-10,-10,0] : isTablet ? [-15,-15,0] : [0,0,0]}
             rotation={[0,Math.PI/3,0]}
         />
-        <Room isMobile={isMobile} isTablet={isTablet}/>
+        <Room />
     </Canvas>
   )
 }

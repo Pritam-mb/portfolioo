@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-
+import CountUp from 'react-countup'
 // import { counterItems } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -32,16 +32,17 @@ const AnimatedCounter = () => {
         ease: "power2.out",
         snap: { innerText: 1 }, // Ensures whole numbers
         scrollTrigger: {
-          trigger: "#counter",
-          start: "top center",
+          trigger: counterRef.current,
+          start: "top bottom",
+          once: true
         },
         // Add the suffix after counting is complete
         onComplete: () => {
           numberElement.textContent = `${item.value}${item.suffix}`;
         },
       });
-    }, counterRef);
-  }, []);
+    });
+  }, { scope: counterRef });
 
   return (
     <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
@@ -53,7 +54,8 @@ const AnimatedCounter = () => {
             className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
           >
             <div className="counter-number text-white-50 text-5xl font-bold mb-2">
-              0 {item.suffix}
+              {/* 0 {item.suffix} */}
+              <CountUp suffix={item.suffix} end={item.value} duration={2.5} separator="," />
             </div>
             <div className="text-white-50 text-lg">{item.label}</div>
           </div>

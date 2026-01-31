@@ -30,7 +30,7 @@ function Hero() {
     })
   return (
     <div>
-        <section className='heroo relative overflow-hidden m-5  flex flex-row justify-between '>
+        <section className='heroo relative overflow-visible m-5  flex flex-row justify-between '>
             <div className='h-80vh mt-40'>
                 <header className='flex flex-col justify-center '>
                     <div className='flex flex-col mb-3 '
@@ -107,11 +107,16 @@ function Hero() {
                 </header>
             </div>
 
-            <figure className=' h-full w-full items-center justify-center pointer-events-auto ' 
+            <figure className='flex flex-wrap  w-full items-center  justify-center pointer-events-auto overflow-visible ' 
             style={{
                 // border: "2px solid red"
+                // backgroundColor: "#fff"
             }}>
-                <div className='border-red-200 '>
+                <div className=' w-full h-60vh justify-center items-center overflow-visible '
+                style={{
+                    // backgroundColor: "#727070ff",
+                    // border:"2px solid yellow"
+                }}>
                     <House/>
                     
                 </div>
