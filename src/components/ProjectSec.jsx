@@ -4,7 +4,7 @@ function ProjectSec() {
     return (
         <div className='flex flex-row gap-6   p-4 m-5'
             style={{
-                border: "2px solid white"
+                // border: "2px solid white"
             }}>
             <div
                 className=' flex flex-col items-left  gap-6 '
@@ -12,13 +12,14 @@ function ProjectSec() {
                     backgroundColor: 'black',
                     width: '60%',
                     height: '100%',
-                    // border: "2px solid red"
+                    // border: "2px solid red",
+                    
 
                 }}>
                 <img src="../public/Project1.png" alt=""
                 className='rounded-xl '
                 style={{
-                    height:"700px",
+                    height:"600px",
                     // width: ""
                 }} />
                 <h1 style={{
