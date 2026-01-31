@@ -1,8 +1,9 @@
 import Navbar from './layouts/Navbar'
 import Hero from './components/Hero'
 import ProjectSec from './components/ProjectSec'
+import Aboutme from './components/Aboutme'
 import NeuralBackground from './components/ui/flow-field-background'
-
+import Techstack from './components/Techstack'
 const App = () => {
   return (
     <div className="relative min-h-screen">
@@ -26,7 +27,8 @@ const App = () => {
           <Navbar/>
           <Hero/>
           <ProjectSec/>
-          
+          <Aboutme/>
+          <Techstack/>
           <div className="text-center mt-8 text-white">
             Welcome to my portfolio
           </div>

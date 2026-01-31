@@ -30,8 +30,8 @@ function Hero() {
     })
   return (
     <div>
-        <section className='heroo relative overflow-visible m-5  flex flex-row justify-between '>
-            <div className='h-80vh mt-40'>
+        <section className='heroo relative overflow-visible m-5  flex flex-col md:flex-row justify-between '>
+            <div className='h-auto md:h-80vh mt-40'>
                 <header className='flex flex-col justify-center '>
                     <div className='flex flex-col mb-3 '
                     style={{
@@ -55,16 +55,16 @@ function Hero() {
                     </div>
                     </div>
                     <div className='mb-5'>
-                        <p>hello i am pritam, it's great to see u in my page</p>
+                        <p>hello i am pritam, it's great to see u in my page. If you found this interesting dont forget to follow</p>
                     </div>
                     <div className='heroo'>
                          <button
-                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-xl border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 "
+                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-l border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 btn-hover"
                         style={{
-                            backgroundColor: "#727070ff",
+                            backgroundColor: "#fcf9f9ff",
                             borderRadius: "20px",
                             // fontFamily: "cursive",
-                            color: "white",
+                            color: "black",
                             fontWeight: "bold",
                             cursor: "pointer",
                             transition: "all 0.3s ease",
@@ -107,12 +107,12 @@ function Hero() {
                 </header>
             </div>
 
-            <figure className='flex flex-wrap  w-full items-center  justify-center pointer-events-auto overflow-visible ' 
+            <figure className='flex flex-wrap w-full items-center justify-center pointer-events-auto overflow-visible' 
             style={{
                 // border: "2px solid red"
                 // backgroundColor: "#fff"
             }}>
-                <div className=' w-full h-60vh justify-center items-center overflow-visible '
+                <div className='w-full h-auto md:h-60vh justify-center items-center overflow-visible'
                 style={{
                     // backgroundColor: "#727070ff",
                     // border:"2px solid yellow"

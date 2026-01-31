@@ -2,7 +2,7 @@ const Navbar = () => {
     const options = ['Works', 'Skills', 'Experience', 'Project']
     return (
         <div>
-            <div className='border-2 border-red  flex flex-row flex-wrap px-6 py-3'
+            <div className='  flex flex-row flex-wrap px-6 py-3'
                 style={{
                     justifyContent: 'space-between',
                     alignItems: 'center',
@@ -29,9 +29,10 @@ const Navbar = () => {
                         gap: "30px",
                         border: "1px",
                         borderRadius: "38px",
-                        backgroundColor: "#727070ff",
+                        // backgroundColor: "#111010ff",
+                        backdropFilter: 'blur(15px)',
                         padding: "11px 25px",
-                        color: "black",
+                        color: "white",
                         boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1)",
                         transition: "all 0.3s ease"
                     }}>
@@ -44,9 +45,9 @@ const Navbar = () => {
                                     borderRadius: "20px",
                                     border: "1px ",
                                     cursor: "pointer",
-                                    color: "black",
+                                    color: "white",
                                     transition: "all 0.3s ease",
-                                    fontFamily: "cursive",
+                                    // fontFamily: "cursive",
                                     fontSize: "16px",
                                     textTransform: "uppercase",
                                     fontWeight: "bold"
@@ -58,7 +59,7 @@ const Navbar = () => {
                                 }}
                                 onMouseLeave={(event) => {
                                     event.target.style.background = 'transparent';
-                                    event.target.style.color = 'black';
+                                    event.target.style.color = 'white';
                                     event.target.style.boxShadow = "none";
                                 }}
                             >
@@ -70,11 +71,12 @@ const Navbar = () => {
 
                 <div>
                     <button
-                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-full border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 "
+                        className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-full border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 btn-hover "
                         style={{
-                            backgroundColor: "#727070ff",
-                            borderRadius: "40px",
-                            fontFamily: "cursive",
+                            backgroundColor: "#f8f3f3ff",
+                            borderRadius: "10px",
+                            // fontFamily: "cursive",
+                            border: "1px solid ",
                             color: "black",
                             fontWeight: "bold",
                             cursor: "pointer",
