@@ -30,14 +30,14 @@ function Hero() {
     })
   return (
     <div>
-        <section className='heroo relative overflow-visible m-5  flex flex-col md:flex-row justify-between '>
-            <div className='h-auto md:h-80vh mt-40'>
+        <section className='heroo relative overflow-visible m-5  flex flex-col md:flex-row justify-between' data-scroll data-scroll-speed="0.5">
+            <div className='h-auto md:h-80vh mt-40' data-scroll data-scroll-delay="0.1">
                 <header className='flex flex-col justify-center '>
                     <div className='flex flex-col mb-3 '
                     style={{
                         color: "white"
                     }}>
-                        <div className='hero-text'>
+                        <div className='hero-text' data-scroll data-scroll-delay="0.2">
 
                         <h1>shapping
                         <span className='slide'>
@@ -54,10 +54,10 @@ function Hero() {
                         <h1>that deliver results</h1>
                     </div>
                     </div>
-                    <div className='mb-5'>
+                    <div className='mb-5' data-scroll data-scroll-delay="0.3">
                         <p>hello i am pritam, it's great to see u in my page. If you found this interesting dont forget to follow</p>
                     </div>
-                    <div className='heroo'>
+                    <div className='heroo' data-scroll data-scroll-delay="0.4">
                          <button
                         className="group pointer-events-auto relative h-12 w-50 cursor-pointer overflow-hidden rounded-l border-2 border-white/20 bg-transparent p-3 px-8 text-center font-semibold backdrop-blur-sm transition-all duration-300 btn-hover"
                         style={{
@@ -108,6 +108,7 @@ function Hero() {
             </div>
 
             <figure className='flex flex-wrap w-full items-center justify-center pointer-events-auto overflow-visible' 
+            data-scroll data-scroll-speed="0.3"
             style={{
                 // border: "2px solid red"
                 // backgroundColor: "#fff"
@@ -122,7 +123,9 @@ function Hero() {
                 </div>
             </figure>
         </section>
-            <AnimatedCounter/>
+            <div data-scroll data-scroll-speed="0.2">
+                <AnimatedCounter/>
+            </div>
     </div>
   )
 }
