@@ -245,6 +245,13 @@ section {
       @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
     }
 
+    /* .bar{
+      height: 0px;
+      width: 2px;
+      background-color: transparent;
+
+    } */
+
     nav.desktop {
       @apply hidden lg:flex items-center;
 
@@ -624,18 +631,37 @@ section {
   }
 }
 
-.music-bit {
-  animation: floatMusic 20s linear infinite, musicPulse 3s ease-in-out infinite;
+/* Floating CD Animation */
+@keyframes floatAndSpin {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0px) translateX(40px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(360deg);
+  }
 }
 
-/* Music cascade container */
-.music-cascade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.3;
+/* Jazz GIF Styling */
+.jazz-gif {
+  animation: jazzPulse 4s ease-in-out infinite;
+}
+
+@keyframes jazzPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.5));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.7));
+  }
 }

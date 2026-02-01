@@ -7,14 +7,17 @@ import Techstack from './components/Techstack'
 import SmoothScroll from './components/SmoothScroll'
 import Feature from './components/Feature'
 import BackgroundMusic from './components/BackgroundMusic'
+import CDBackground from './components/CDBackground'
+import JazzCenter from './components/JazzCenter'
 import MusicCascade from './components/MusicCascade'
-import NavbarMusicBits from './components/NavbarMusicBits'
+import Experience from  './components/Experience'
 const App = () => {
   return (
     <SmoothScroll>
       <BackgroundMusic />
       <MusicCascade />
-      <NavbarMusicBits />
+      {/* <CDBackground /> */}
+      <JazzCenter />
       <div className="relative min-h-screen">
         {/* Fixed Neural Background */}
         <div className="fixed inset-0 z-0">
@@ -39,6 +42,7 @@ const App = () => {
             <Aboutme/>
             <Techstack/>
             <Feature/>
+            <Experience/>
             <div className="text-center mt-8 text-white">
               Welcome to my portfolio
             </div>

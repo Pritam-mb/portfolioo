@@ -30,7 +30,7 @@ function MusicCascade() {
                 y: -50,
                 size: Math.random() * 30 + 20,
                 speed: Math.random() * 2 + 1,
-                opacity: Math.random() * 0.6 + 0.2,
+                opacity: Math.random() * 0.8 + 0.4,
                 rotation: Math.random() * 360,
                 rotationSpeed: (Math.random() - 0.5) * 2,
                 type: Math.floor(Math.random() * 4), // Different music symbols
@@ -102,7 +102,7 @@ function MusicCascade() {
             className="fixed inset-0 pointer-events-none"
             style={{
                 zIndex: 1,
-                opacity: 0.4
+                opacity: 0.7
             }}
         />
     )

@@ -17,7 +17,9 @@ function Feature() {
                         border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
                 <h1></h1>
-                <h1>Quality focus</h1>
+                <h1  style={{
+                    fontSize:"40px"
+                }}>Quality focus</h1>
                 <h2>Delivering  high quality results while maintaining attention to every detail</h2>
             </div>
             <div  className=' flex flex-col p-8'
@@ -32,7 +34,9 @@ function Feature() {
                         backdropFilter: 'blur(15px)',
                         border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-                <h1>Innovation driven</h1>
+                <h1  style={{
+                    fontSize:"40px"
+                }}>Innovation driven</h1>
                 <h2>Embracing creativity and new ideas to push the boundaries of what's possible</h2>
             </div>
             <div  className=' flex flex-col p-8'
@@ -47,7 +51,11 @@ function Feature() {
                         backdropFilter: 'blur(15px)',
                         border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-                <h1>Client centric</h1>
+                <h1
+                className=''
+                style={{
+                    fontSize:"40px"
+                }}>Client centric</h1>
                 <h2>Fostering long term relationships built on trust, communication and mutual benefit</h2>
             </div>
         </div>
