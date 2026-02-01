@@ -7,10 +7,14 @@ import Techstack from './components/Techstack'
 import SmoothScroll from './components/SmoothScroll'
 import Feature from './components/Feature'
 import BackgroundMusic from './components/BackgroundMusic'
+import MusicCascade from './components/MusicCascade'
+import NavbarMusicBits from './components/NavbarMusicBits'
 const App = () => {
   return (
     <SmoothScroll>
       <BackgroundMusic />
+      <MusicCascade />
+      <NavbarMusicBits />
       <div className="relative min-h-screen">
         {/* Fixed Neural Background */}
         <div className="fixed inset-0 z-0">
