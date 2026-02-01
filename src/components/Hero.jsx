@@ -55,7 +55,7 @@ function Hero() {
                     </div>
                     </div>
                     <div className='mb-5' data-scroll data-scroll-delay="0.3">
-                        <p>hello i am pritam, it's great to see u in my page. If you found this interesting dont forget to follow</p>
+                        <p>hola amigo! i am pritam, it's great to see u in my page. If you found this interesting dont forget to follow</p>
                     </div>
                     <div className='heroo' data-scroll data-scroll-delay="0.4">
                          <button

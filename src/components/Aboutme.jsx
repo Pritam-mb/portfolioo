@@ -39,7 +39,7 @@ function Aboutme() {
         return (
 
 
-        <div className='mt-80 p-20  text-black h-full gap-6 flex flex-col'>
+        <div className='mt-50 p-20  text-black h-full gap-6 flex flex-col'>
             <h1 className='text-7xl text-center head'>
                {who.split("").map((char,i)=>(
                     <span key={i}>{char}</span>
@@ -48,7 +48,7 @@ function Aboutme() {
             <div
                 className='items-center justify-center '
                 style={{
-                    fontSize: "50px",
+                    fontSize: "30px",
                     textAlign: "center"
                 }}>
 

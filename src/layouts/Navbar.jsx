@@ -8,13 +8,14 @@ const Navbar = () => {
                     alignItems: 'center',
                     borderRadius: "40px"
                 }}>
-                <h2 style={{
+                <h2 className="hero-text"
+                 style={{
                     fontSize: "40px",
-                    fontFamily: "Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif",
+                    // fontFamily: "",
                     fontWeight: "bold",
                     letterSpacing: "2px"
                 }}>
-                    Pritam Patra
+                    PritamXculer
                 </h2>
                 <div className='flex flex-row gap-10 p-6 flex-wrap'
                     style={{
@@ -75,8 +76,6 @@ const Navbar = () => {
                         style={{
                             backgroundColor: "#f8f3f3ff",
                             borderRadius: "10px",
-                            // fontFamily: "cursive",
-                            border: "1px solid ",
                             color: "black",
                             fontWeight: "bold",
                             cursor: "pointer",

@@ -5,10 +5,12 @@ import Aboutme from './components/Aboutme'
 import NeuralBackground from './components/ui/flow-field-background'
 import Techstack from './components/Techstack'
 import SmoothScroll from './components/SmoothScroll'
-
+import Feature from './components/Feature'
+import BackgroundMusic from './components/BackgroundMusic'
 const App = () => {
   return (
     <SmoothScroll>
+      <BackgroundMusic />
       <div className="relative min-h-screen">
         {/* Fixed Neural Background */}
         <div className="fixed inset-0 z-0">
@@ -28,18 +30,11 @@ const App = () => {
           {/* Main Content */}
           <div className="relative z-20 items-center justify-center p-8">
             <Navbar/>
-            <section data-scroll-section>
-              <Hero/>
-            </section>
-            <section data-scroll-section>
-              <ProjectSec/>
-            </section>
-            <section data-scroll-section>
-              <Aboutme/>
-            </section>
-            <section data-scroll-section>
-              <Techstack/>
-            </section>
+            <Hero/>
+            <ProjectSec/>
+            <Aboutme/>
+            <Techstack/>
+            <Feature/>
             <div className="text-center mt-8 text-white">
               Welcome to my portfolio
             </div>

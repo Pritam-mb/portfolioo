@@ -10,7 +10,7 @@ function House() {
     return (
     <Canvas
      camera={{position :[40,40,40],fov : 45}}
-     style={{ width: '100%', height: '800px', border:" 2px solid black" ,justifyContent: "center",alignContent:"center", overflow: 'visible'}}
+     style={{ width: '100%', height: '800px',justifyContent: "center",alignContent:"center", overflow: 'visible'}}
      className='p-5 overflow-visible'
     >
         {/* <ambientLight intensity={0.5} color="#ffffff"/> */}
