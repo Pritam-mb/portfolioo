@@ -11,4 +11,22 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Enable manual chunking for better code splitting
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three': ['three', '@react-three/fiber', '@react-three/drei'],
+          'animations': ['gsap', '@gsap/react'],
+          'vendor': ['react', 'react-dom']
+        }
+      }
+    },
+    // Increase chunk size warning limit
+    chunkSizeWarningLimit: 1000,
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['three', '@react-three/fiber', '@react-three/drei', 'gsap']
+  }
 })

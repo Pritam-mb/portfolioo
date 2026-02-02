@@ -1,30 +1,35 @@
+import { lazy, Suspense } from 'react'
 import Navbar from './layouts/Navbar'
 import Hero from './components/Hero'
-import ProjectSec from './components/ProjectSec'
-import Aboutme from './components/Aboutme'
-import NeuralBackground from './components/ui/flow-field-background'
-import Techstack from './components/Techstack'
 import SmoothScroll from './components/SmoothScroll'
-import Feature from './components/Feature'
-import BackgroundMusic from './components/BackgroundMusic'
-import CDBackground from './components/CDBackground'
-import JazzCenter from './components/JazzCenter'
-import MusicCascade from './components/MusicCascade'
-import Experience from  './components/Experience'
+import NeuralBackground from './components/ui/flow-field-background'
+
+// Lazy load heavy components
+const ProjectSec = lazy(() => import('./components/ProjectSec'))
+const Aboutme = lazy(() => import('./components/Aboutme'))
+const Techstack = lazy(() => import('./components/Techstack'))
+const Feature = lazy(() => import('./components/Feature'))
+const BackgroundMusic = lazy(() => import('./components/BackgroundMusic'))
+const JazzCenter = lazy(() => import('./components/JazzCenter'))
+const MusicCascade = lazy(() => import('./components/MusicCascade'))
+const Experience = lazy(() => import('./components/Experience'))
+
 const App = () => {
   return (
     <SmoothScroll>
-      <BackgroundMusic />
-      <MusicCascade />
-      {/* <CDBackground /> */}
-      <JazzCenter />
+      <Suspense fallback={<div className="fixed inset-0 bg-black flex items-center justify-center"><div className="text-white text-xl">Loading...</div></div>}>
+        <BackgroundMusic />
+        <MusicCascade />
+        {/* <CDBackground /> */}
+        <JazzCenter />
+      </Suspense>
       <div className="relative min-h-screen">
         {/* Fixed Neural Background */}
         <div className="fixed inset-0 z-0">
           <NeuralBackground 
             color="#6366f1" 
             trailOpacity={0.08}
-            particleCount={400}
+            particleCount={250}
             speed={0.6}
           />
         </div>
@@ -38,11 +43,13 @@ const App = () => {
           <div className="relative z-20 items-center justify-center p-8">
             <Navbar/>
             <Hero/>
-            <ProjectSec/>
-            <Aboutme/>
-            <Techstack/>
-            <Feature/>
-            <Experience/>
+            <Suspense fallback={<div className="text-white text-center py-8">Loading content...</div>}>
+              <ProjectSec/>
+              <Aboutme/>
+              <Techstack/>
+              <Feature/>
+              <Experience/>
+            </Suspense>
             <div className="text-center mt-8 text-white">
               Welcome to my portfolio
             </div>

@@ -1,0 +1,6 @@
+# Ignore source files that aren't needed in production
+*.md
+!README.md
+.vscode/
+.git/
+node_modules/
